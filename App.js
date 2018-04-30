@@ -1,29 +1,30 @@
 import React from 'react';
-import { Image, View, StyleSheet, Text, Button} from 'react-native';
+import { Image, View, StyleSheet, Text, Button,  Alert, AppRegistry, Platform, Linking,
+   TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, TouchableWithoutFeedback} from 'react-native';
 
 export default class App extends React.Component {
+
   render() {
     return (
-
       <View style={styles.container}>
-      <Text style={{fontSize: 40, color: 'white'}}>Congratulations!</Text>
-
+      <Text style={{fontSize: 40, color: 'white', textAlign: 'center'}}>Happy one year Anniversary!</Text>
       <Image
-        source={{uri: 'https://ws.engr.illinois.edu/directory/viewphoto.aspx?id=4930&s=215&type=portrait'}}
+        source={require('./P_20170526_151336_BF.jpg')}
         style={{width: 320, height:180}}
       />
-        <Text>Once upon a time there was a well-minded CPSC221 class!</Text>
-        <Text>Licking graphs and eating C++ at an all time high.</Text>
-        <Text style={{fontSize: 20, color: 'white', textAlign: 'center'}}>Today we join in the matrimony of such lovers!</Text>
+        <Text>Once upon a time there was a hopeful Indonesian kid</Text>
+        <Text>Who just went to university not knowing anything</Text>
+        <Text style={{fontSize: 20, color: 'white', textAlign: 'center'}}>Today we join for one year but it feels</Text>
+        <Text style={{fontSize: 30, color: 'white', textAlign: 'center'}}>Time Stood Still</Text>
         <Image
-          source={{uri: 'https://uvmbored.com/wp-content/uploads/2017/01/o13vffkurigjlahnbtwp.jpg'}}
+          source={require('./P_20170615_142821_BF.jpg')}
           style={{width: 320, height:180}}
         />
         <Button
         style={{fontSize: 20, color: 'white'}}
         styleDisabled={{color: 'red'}}
-        onPress={window.location.href = 'https://facebook.github.io/react-native/'}
-        title="Visit our Website"
+        onPress={ ()=>{ Linking.openURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}}
+        title="Let the Magic Begin"
 >
   Press Me
 </Button>
